@@ -20,6 +20,11 @@ export class CookiesListComponent {
     private cookies:Cookie[];
 
     constructor(private cookiesService:CookiesService) {
-        cookiesService.get().subscribe(cookies => this.cookies = cookies);
+        cookiesService.cookies$.subscribe(cookies => this.cookies = cookies);
+
+        // TODO: remove!
+        setTimeout(() => {
+            cookiesService.createCookie(new Cookie('aaa', 'bbb'));
+        }, 2000);
     }
 }
