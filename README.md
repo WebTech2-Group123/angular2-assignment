@@ -6,5 +6,5 @@ Tasks:
     * [x] list all cookies
     * [x] router
  * Service:
-    * [ ] store cookie recipes
+    * [x] store cookie recipes
     * [x] retrieve data form JSON file
