@@ -1,0 +1,27 @@
+{
+  "name": "angular2-assignment",
+  "version": "0.1.0",
+  "description": "Assignment 4 - Angular2",
+  "scripts": {
+    "tsc": "tsc -p src -w",
+    "start": "live-server --open=src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebTech2-Group123/angular2-assignment.git"
+  },
+  "author": "Group 123",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WebTech2-Group123/angular2-assignment/issues"
+  },
+  "homepage": "https://github.com/WebTech2-Group123/angular2-assignment#readme",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.46",
+    "systemjs": "^0.19.6"
+  },
+  "devDependencies": {
+    "live-server": "^0.8.2",
+    "typescript": "^1.6.2"
+  }
+}
