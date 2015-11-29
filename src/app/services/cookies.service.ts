@@ -1,17 +1,20 @@
 import {Injectable} from 'angular2/angular2';
+import {Http, HTTP_PROVIDERS} from 'angular2/http';
 import {Cookie} from '../model/cookie';
 
 @Injectable()
 export class CookiesService {
 
-    private _cookies:Cookie[];
+    private _cookies;
 
-    constructor() {
-        this._cookies = [
-            new Cookie('Cookie 1', 'lorem'),
-            new Cookie('Cookie 2', 'ipsum'),
-            new Cookie('Cookie 3', 'generator')
-        ];
+    constructor(private _http:Http) {
+        this._cookies = [];
+        this._http.get('cookies.json')
+            .map(res => res.json())
+            .subscribe(cookies => {
+                this._cookies = cookies;
+                console.log(cookies);
+            });
     }
 
     get() {

@@ -17,8 +17,14 @@ import {Cookie} from '../model/cookie';
     `
 })
 export class CookiesListComponent {
-    cookies: Cookie[];
-    constructor(public cookiesService:CookiesService) {
-        this.cookies = cookiesService.get();
+    cookies;
+    constructor(private _cookiesService:CookiesService) {
+        this.cookies = _cookiesService.get();
+
+        setTimeout(() => {
+            console.log('Cookies');
+            console.log(this.cookies);
+            console.log(_cookiesService.get());
+        }, 2000);
     }
 }
