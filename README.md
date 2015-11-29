@@ -4,7 +4,7 @@ Tasks:
  * Components:
     * [ ] create cookie recipes
     * [ ] list all cookies
-    * [ ] router
+    * [x] router
  * Service:
     * [ ] store cookie recipes
     * [ ] retrieve data form JSON file

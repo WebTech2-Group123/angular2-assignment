@@ -7,4 +7,5 @@ logs
 .idea/
 
 # Angular2
-src/app/*.js
+src/app/**/*.js
+src/app/**/*.js.map
