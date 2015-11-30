@@ -1,9 +1,17 @@
-<h2>Cookies list</h2>
-<ul>
-    <li *ng-for="#cookie of cookies">
-        <div class="cookie">
-            <h2>{{cookie.name}}</h2>
-            <p>{{cookie.description}}</p>
-        </div>
-    </li>
-</ul>
+<div class="container">
+    <h2>My cookies</h2>
+    <ul class="list-unstyled cookies">
+        <li *ng-for="#cookie of cookies">
+            <div class="row">
+                <div class="col-md-3">
+                    <img [src]="cookie.url" alt="Cookie Image" class="img-responsive"></img>
+                </div>
+                <div class="col-md-9">
+                    <h3>{{cookie.name}}</h3>
+                    <p class="description">{{cookie.description}}</p>
+                    <p class="difficulty">Difficulty: {{cookie.difficulty}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

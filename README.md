@@ -2,7 +2,7 @@
 
 Tasks:
  * Components:
-    * [ ] create cookie recipes
+    * [x] create cookie recipes
     * [x] list all cookies
     * [x] router
  * Service:
