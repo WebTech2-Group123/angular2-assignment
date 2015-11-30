@@ -1,3 +1,31 @@
+body {
+    padding-top: 50px;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.main-content {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+ul.cookies > li {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+ul.cookies .description {
+    margin-top: 20px;
+}
+
+ul.cookies .difficulty {
+    margin-top: 50px;
+    font-size: 18px;
+}
+
 .ng-valid[required] {
     border-left: 5px solid #42A948; /* green */
 }
