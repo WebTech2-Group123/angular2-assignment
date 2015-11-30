@@ -2,47 +2,60 @@
     <h2>New Cookie</h2>
 
     <form (ng-submit)="onSubmit()" #hf="form">
+        <div class="row">
 
-        <!-- name -->
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" required [(ng-model)]="model.name" ng-control="name" #name="form">
-
-            <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
-                Name is required
+            <!-- Cookie preview -->
+            <div class="col-md-3">
+                <p class="text-center">Cookie preview</p>
+                <img class="img-responsive" [src]="model.url">
             </div>
-        </div>
 
-        <!-- description -->
-        <div class="form-group">
-            <label for="alterEgo">Description</label>
-            <input type="text" class="form-control" [(ng-model)]="model.description" ng-control="description">
-        </div>
+            <!-- actual form input -->
+            <div class="col-md-9">
 
-        <!-- difficulty -->
-        <div class="form-group">
-            <label for="power">Difficulty</label>
-            <select class="form-control" required [(ng-model)]="model.difficulty" ng-control="difficulty" #difficulty="form">
-                <option *ng-for="#d of difficulties" [value]="d">{{d}}</option>
-            </select>
+                <!-- name -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" required [(ng-model)]="model.name" ng-control="name" #name="form">
 
-            <div [hidden]="difficulty.valid || difficulty.untouched" class="alert alert-danger">
-                Difficulty is required
+                    <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+                        Name is required
+                    </div>
+                </div>
+
+                <!-- description -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" [(ng-model)]="model.description" ng-control="description">
+                </div>
+
+                <!-- difficulty -->
+                <div class="form-group">
+                    <label for="difficulty">Difficulty</label>
+                    <select class="form-control" required [(ng-model)]="model.difficulty" ng-control="difficulty" #difficulty="form">
+                        <option *ng-for="#d of difficulties" [value]="d">{{d}}</option>
+                    </select>
+
+                    <div [hidden]="difficulty.valid || difficulty.untouched" class="alert alert-danger">
+                        Difficulty is required
+                    </div>
+                </div>
+
+                <!-- image url -->
+                <div class="form-group">
+                    <label for="url">Image URL</label>
+                    <input type="text" class="form-control" required [(ng-model)]="model.url" ng-control="url" #url="form">
+
+                    <div [hidden]="url.valid || url.untouched" class="alert alert-danger">
+                        Image URL is required
+                    </div>
+                </div>
+
+                <!-- submit -->
+                <button type="submit" class="btn btn-primary" [disabled]="!hf.form.valid">Save</button>
             </div>
+
         </div>
-
-        <!-- image url -->
-        <div class="form-group">
-            <label for="alterEgo">Image URL</label>
-            <input type="text" class="form-control" required [(ng-model)]="model.url" ng-control="url" #url="form">
-
-            <div [hidden]="url.valid || url.untouched" class="alert alert-danger">
-                Image URL is required
-            </div>
-        </div>
-
-        <!-- submit -->
-        <button type="submit" class="btn btn-primary" [disabled]="!hf.form.valid">Save</button>
     </form>
 
 </div>
