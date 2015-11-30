@@ -1,6 +1,18 @@
-<h1>Common</h1>
-<ul>
-    <li><a [router-link]="['/CookiesList']">CookiesList</a></li>
-    <li><a [router-link]="['/CookieForm', {id: 3}]">CookieForm</a></li>
-</ul>
-<router-outlet></router-outlet>
+<!-- navigation bar -->
+<header>
+    <h1>Common</h1>
+    <ul>
+        <li><a [router-link]="['/CookiesList']">CookiesList</a></li>
+        <li><a [router-link]="['/CookieForm']">CookieForm</a></li>
+    </ul>
+</header>
+
+<!-- display HTML based on current root -->
+<section>
+    <router-outlet></router-outlet>
+</section>
+
+<!-- footer -->
+<footer>
+    <p>Powered by Angular2 =) <a href="https://github.com/WebTech2-Group123/angular2-assignment" target="_blank">GitHub repo</a></p>
+</footer>

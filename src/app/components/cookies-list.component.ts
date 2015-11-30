@@ -3,7 +3,6 @@ import {CookiesService} from '../services/cookies.service';
 import {Cookie} from '../model/cookie';
 
 @Component({
-    selector: 'cookies-list',
     templateUrl: 'app/components/cookies-list.component.html'
 })
 export class CookiesListComponent {

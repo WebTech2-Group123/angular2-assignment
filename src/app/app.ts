@@ -22,7 +22,7 @@ import {CookieFormComponent} from './components/cookie-form.component';
         name: 'CookiesList'
     }),
     new Route({
-        path: '/cookies/:id',
+        path: '/cookies/new',
         component: CookieFormComponent,
         name: 'CookieForm'
     })

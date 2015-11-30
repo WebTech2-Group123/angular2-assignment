@@ -18,6 +18,8 @@
   "homepage": "https://github.com/WebTech2-Group123/angular2-assignment#readme",
   "dependencies": {
     "angular2": "^2.0.0-alpha.46",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.1.4",
     "systemjs": "^0.19.6"
   },
   "devDependencies": {

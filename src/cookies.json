@@ -1,14 +1,20 @@
 [
   {
     "name": "Cookie 1",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "difficulty": 3,
+    "url": "http://www.spyblocker-software.com/wp-content/uploads/2014/06/cookie-1.gif"
   },
   {
     "name": "Cookie 2",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "difficulty": 1,
+    "url": "http://www.spyblocker-software.com/wp-content/uploads/2014/06/cookie-1.gif"
   },
   {
     "name": "Cookie 3",
-    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "difficulty": 5,
+    "url": "http://www.spyblocker-software.com/wp-content/uploads/2014/06/cookie-1.gif"
   }
 ]

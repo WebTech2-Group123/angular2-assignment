@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Angular 2 QuickStart</title>
+
+    <!-- favicon -->
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAWO14AAAAAAA8tSgAtV4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERAAABEREREQAAAAABEREQAzMzMwAREQAzMzIjMAERAiMzMiMzARACIyIzMyIAEAMzIjIjIgAQAzMzMiMzABADMiMzMiMAEAMyIyIyIwAQAiMzIjMzABECIyIzIjMBEQAzIjMiMAEREAMzMzMAERERAAAAAAERERERAAABERH8HwAA8AcAAOADAADAAQAAwAEAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAMABAADAAQAA4AMAAPAHAAD8HwAA"
+          rel="icon" type="image/x-icon"/>
+
+    <!-- load CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- load Angular2 -->
     <script src="../node_modules/systemjs/dist/system.src.js"></script>
     <script src="../node_modules/angular2/bundles/angular2.dev.js"></script>
     <script src="../node_modules/angular2/bundles/router.dev.js"></script>
@@ -12,8 +23,15 @@
         });
         System.import('app/app');
     </script>
+
+    <!-- load jQuery + Boostrap JS -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" async></script>
+
 </head>
+
 <body>
 <app>Loading...</app>
 </body>
+
 </html>

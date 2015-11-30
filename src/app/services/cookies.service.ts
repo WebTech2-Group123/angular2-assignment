@@ -15,7 +15,7 @@ export class CookiesService {
 
     constructor(private http:Http) {
 
-        // initialize observable
+        // initialize observable (NB: async)
         this.cookies$ = new Observable(observer => this.cookiesObserver = observer).share();
         this.dataStore = {
             cookies: []
@@ -30,15 +30,11 @@ export class CookiesService {
                 this.dataStore.cookies = data;
 
                 // push the new list of cookies into the Observable stream
-                this.cookiesObserver.next(this.dataStore.cookies);
+                if (this.cookiesObserver) {
+                    this.cookiesObserver.next(this.dataStore.cookies);
+                }
 
-            }, error => console.log('Could not load cookies.'));
-
-
-        // TODO: remove!
-        setInterval(() => {
-            this.createCookie(new Cookie('aaa', 'bbb'));
-        }, 2000);
+            }, error => console.error('Could not load cookies: ' + error));
     }
 
     // return the current available cookied
@@ -48,7 +44,13 @@ export class CookiesService {
 
     // create a new cookie
     createCookie(cookie:Cookie):void {
-        this.dataStore.cookies.push(cookie);
-        this.cookiesObserver.next(this.dataStore.cookies);
+
+        // add cookie to the datastore
+        this.dataStore.cookies.unshift(cookie);
+
+        // push the new list of cookies into the Observable stream
+        if (this.cookiesObserver) {
+            this.cookiesObserver.next(this.dataStore.cookies);
+        }
     }
 }
