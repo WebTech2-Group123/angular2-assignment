@@ -1,20 +1,20 @@
 [
   {
-    "name": "Amazing Cookie",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "difficulty": 3,
-    "url": "http://www.spyblocker-software.com/wp-content/uploads/2014/06/cookie-1.gif"
-  },
-  {
-    "name": "Lorem Cookie",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "name": "Aachener Printen",
+    "description": "Gingerbread is a sweet food-product flavored with ginger and typically using honey or molasses rather than just sugar.",
     "difficulty": 1,
-    "url": "http://cdn.shopify.com/s/files/1/0302/2969/products/great-cookie-m_and_m-cookie-03_1024x1024.jpg?v=1390499314"
+    "url": "http://static.chefkoch-cdn.de/ck.de/rezepte/9/9792/521895-960x720-aachener-printen-iii.jpg"
   },
   {
-    "name": "Ipsum Cookie",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "name": "Pizza",
+    "description": "Pizza is a flatbread generally topped with tomato sauce and cheese and baked in an oven. It is commonly topped with a selection of meats, vegetables and condiments.",
+    "difficulty": 3,
+    "url": "http://static.chefkoch-cdn.de/ck.de/rezepte/274/274885/789292-960x720-pizza-rucola-oder-pizza-barbecue-mit-kaeserand.jpg"
+  },
+  {
+    "name": "Christstollen",
+    "description": "Stollen is a fruit bread containing dried fruit and often covered with powdered sugar or icing sugar. The bread is usually made with chopped candied fruit and/or dried fruit, nuts and spices.",
     "difficulty": 5,
-    "url": "http://www.coldstonecreamery.com/assets/img/products/cookies/cookie-cookiecrumb.jpg"
+    "url": "http://i.computer-bild.de/imgs/2/0/7/6/3/2/6/Christstollen-745x559-05ecfdf62f1ad3a6.jpg"
   }
 ]
