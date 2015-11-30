@@ -1,14 +1,15 @@
 import {bootstrap, provide, Component} from 'angular2/angular2';
 import {HTTP_BINDINGS} from 'angular2/http';
 import {RouteConfig, Route, Redirect, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+
 import {CookiesService} from './services/cookies.service';
 import {CookiesListComponent} from './components/cookies-list.component';
-import {CookieDetailComponent} from './components/cookie-detail.component';
+import {CookieFormComponent} from './components/cookie-form.component';
 
 @Component({
     selector: 'app',
     directives: [ROUTER_DIRECTIVES],
-    template: '<router-outlet></router-outlet>'
+    templateUrl: 'app/app.html'
 })
 @RouteConfig([
     new Redirect({
@@ -22,8 +23,8 @@ import {CookieDetailComponent} from './components/cookie-detail.component';
     }),
     new Route({
         path: '/cookies/:id',
-        component: CookieDetailComponent,
-        name: 'CookieDetail'
+        component: CookieFormComponent,
+        name: 'CookieForm'
     })
 ])
 class AppComponent {

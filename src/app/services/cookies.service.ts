@@ -21,26 +21,33 @@ export class CookiesService {
             cookies: []
         };
 
-        // retrieve data
-        this.loadCookies();
-    }
-
-    // TODO: refactor
-    loadCookies() {
+        // load cookies from the JSON file
         this.http.get('cookies.json')
             .map(res => res.json())
             .subscribe(data => {
 
-                // Update data store
+                // update data store
                 this.dataStore.cookies = data;
 
-                // Push the new list of cookies into the Observable stream
+                // push the new list of cookies into the Observable stream
                 this.cookiesObserver.next(this.dataStore.cookies);
 
             }, error => console.log('Could not load cookies.'));
+
+
+        // TODO: remove!
+        setInterval(() => {
+            this.createCookie(new Cookie('aaa', 'bbb'));
+        }, 2000);
     }
 
-    createCookie(cookie:Cookie) {
+    // return the current available cookied
+    getCookies():Cookie[] {
+        return this.dataStore.cookies;
+    }
+
+    // create a new cookie
+    createCookie(cookie:Cookie):void {
         this.dataStore.cookies.push(cookie);
         this.cookiesObserver.next(this.dataStore.cookies);
     }

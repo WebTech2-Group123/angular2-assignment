@@ -4,27 +4,19 @@ import {Cookie} from '../model/cookie';
 
 @Component({
     selector: 'cookies-list',
-    template: `
-         <h1>Cookies list</h1>
-         <ul>
-            <li *ng-for="#cookie of cookies">
-                <div class="cookie">
-                    <h2>{{cookie.name}}</h2>
-                    <p>{{cookie.description}}</p>
-                </div>
-            </li>
-         </ul>
-    `
+    templateUrl: 'app/components/cookies-list.component.html'
 })
 export class CookiesListComponent {
+
+    // store a copy of the cookies in this component
     private cookies:Cookie[];
 
     constructor(private cookiesService:CookiesService) {
-        cookiesService.cookies$.subscribe(cookies => this.cookies = cookies);
 
-        // TODO: remove!
-        setTimeout(() => {
-            cookiesService.createCookie(new Cookie('aaa', 'bbb'));
-        }, 2000);
+        // load the last available cookies from the service
+        this.cookies = cookiesService.getCookies();
+
+        // subscribe for cookies updates (eg. cookies retrieved via HTTP GET)
+        cookiesService.cookies$.subscribe(cookies => this.cookies = cookies);
     }
 }
